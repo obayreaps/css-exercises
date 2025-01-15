@@ -5,13 +5,13 @@ body {
 }
 
 .header {
-  height: 72px;
+  height: 55px; 
   background: darkmagenta;
   color: white;
 }
 
 .footer {
-  height: 72px;
+  height: 55px;
   background: #eee;
   color: darkmagenta;
 }
@@ -26,4 +26,71 @@ body {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+}
+
+
+/* New Code */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.header{
+  font-size: 32px;
+  font-weight: 900;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  /* display: flex; Don't need it, since its a flex child, 
+     parent is .content w/ flex already declared */
+  flex-direction: column;
+  width: 300px;
+  flex-shrink: 0;
+  padding: 16px;
+}
+
+.card-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 48px;
+  margin-right: auto;
+}
+
+.card { 
+  width: 300px;
+  border: 1px solid gainsboro;
+  padding: 16px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
 }
